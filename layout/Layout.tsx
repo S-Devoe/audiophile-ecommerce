@@ -7,8 +7,8 @@ function Layout({children}: any) {
     <>
       <Header />
       {children}
-      <Footer />
       <ToastContainer bodyClassName="toastBody" limit={1} />
+      <Footer />
     </>
   );
 }
