@@ -1,7 +1,7 @@
 import { useModal } from "../../store/ModalContextProvider";
 import CartModal from "../body/CartModal";
 import CheckoutModal from "../body/CheckoutModal";
-import Navbar from "../body/Navbar"
+import Navbar from "../body/Navbar";
 import CartIcon from "../molecules/CartIcon";
 import Logo from "../molecules/Logo";
 import MobileNav from "../molecules/MobileNav";
@@ -27,4 +27,4 @@ function Header() {
     </>
   );
 }
-export default Header
+export default Header;

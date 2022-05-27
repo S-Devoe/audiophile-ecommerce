@@ -1,4 +1,5 @@
 import { ToastContainer } from "react-toastify";
+import Footer from "../components/templates/Footer";
 import Header from "../components/templates/Header"
 
 function Layout({children}: any) {
@@ -6,6 +7,7 @@ function Layout({children}: any) {
     <>
       <Header />
       {children}
+      <Footer />
       <ToastContainer bodyClassName="toastBody" limit={1} />
     </>
   );

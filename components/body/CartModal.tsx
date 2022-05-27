@@ -7,7 +7,6 @@ import {
   totalQuantity,
 } from "../../store/CartSlice";
 import { useModal } from "../../store/ModalContextProvider";
-import MuiModal from "@material-ui/core/Modal";
 import CartItem from "../molecules/CartItem";
 import Link from "next/link";
 

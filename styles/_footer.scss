@@ -1,0 +1,131 @@
+.footer {
+  background: $black;
+  margin-top: 7.5rem;
+  text-align: center;
+
+  .footer_content {
+    position: relative;
+    padding-top: 3.25rem;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 0.25rem;
+      width: 6.25rem;
+      background: $accent;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+
+      @media screen and (min-width: 768px) {
+        transform: translateX(0);
+        left: 1.5rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    margin-top: 6rem;
+
+    .footer_content {
+      padding-top: 3.75rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 12.5rem;
+
+    .footer_content {
+      margin-top: 4.6875rem;
+    }
+  }
+}
+
+.footer_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    li {
+      a {
+        font-size: 0.8125rem;
+        font-weight: bold;
+        color: $white;
+        letter-spacing: 0.125rem;
+        text-transform: uppercase;
+        transition: color 0.2s linear;
+
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+
+    ul {
+      flex-direction: row;
+      gap: 0.8234rem;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    ul {
+      gap: 2.125rem;
+    }
+  }
+}
+
+.footer_text {
+  margin-top: 3rem;
+
+  p {
+    font-size: 0.9375rem;
+    line-height: 1.66;
+    color: $textLight;
+    font-weight: 400;
+  }
+}
+
+.footer_bottom {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  p {
+    font-size: 0.9375rem;
+    line-height: 1.66;
+    color: $textLight;
+    font-weight: 400;
+  }
+
+  .social_links {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 1rem;
+  }
+
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+
+  }
+}

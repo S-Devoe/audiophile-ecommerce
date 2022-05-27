@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react"; 
-import { useDisclosure } from "react-use-disclosure";
+
 
 export interface ContextProps {
   cartOpen: boolean;
