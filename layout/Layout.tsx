@@ -1,8 +1,8 @@
 import { ToastContainer } from "react-toastify";
 import Footer from "../components/templates/Footer";
-import Header from "../components/templates/Header"
+import Header from "../components/templates/Header";
 
-function Layout({children}: any) {
+function Layout({ children }: any) {
   return (
     <>
       <Header />
@@ -12,4 +12,4 @@ function Layout({children}: any) {
     </>
   );
 }
-export default Layout
+export default Layout;
