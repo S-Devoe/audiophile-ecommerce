@@ -1,0 +1,38 @@
+.mobile_nav{
+    width: 100%;
+   
+    // top: 5rem;
+
+    .default{
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: .5s ease-in-out;
+    }
+
+    .active{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+        transition: .5s ease-in-out;
+         
+    }
+    ul{
+    position: fixed;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    overflow: scroll;
+    background-color: $white;
+    // margin-top: 5.95rem;
+
+        .category_list{
+            
+        }
+    }
+}

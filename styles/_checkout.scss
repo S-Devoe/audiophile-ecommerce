@@ -1,0 +1,307 @@
+.checkout-page {
+  background: #fafafa;
+  padding-bottom: 8rem;
+}
+
+.checkout_page-template {
+  padding-top: 1.5rem;
+  .go-back {
+    margin: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+
+    .form-content {
+      background: $white;
+      border-radius: 0.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-top: 1.5rem;
+      padding-bottom: 2rem;
+
+      h1 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      fieldset {
+        margin-bottom: 2rem;
+        border: none;
+
+        legend {
+          text-transform: uppercase;
+          font-size: 0.8125rem;
+          letter-spacing: 0.0581rem;
+          margin-bottom: 1rem;
+          font-weight: bold;
+          color: $accent;
+        }
+
+        .billing_form_grid {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          .form_field-1,
+          .form_field-2,
+          .form_field-3 {
+            display: flex;
+            flex-direction: column;
+
+            label {
+              font-size: 0.75rem;
+              margin-bottom: 0.65rem;
+              font-weight: bold;
+              color: $black;
+            }
+
+            input {
+              width: 100%;
+              outline: none;
+              border: 1px solid #cfcfcf;
+              padding: 1rem;
+              border-radius: 0.5rem;
+              font-weight: normal;
+              font-size: 0.875rem;
+              color: $black;
+              transition: all 0.2s;
+
+              &:focus {
+                border-color: $accent;
+              }
+            }
+          }
+        }
+
+        .shipping_form_grid {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          .form_field_address,
+          .form_field_zip,
+          .form_field_city,
+          .form_field_country {
+            display: flex;
+            flex-direction: column;
+
+            label {
+              font-size: 0.75rem;
+              margin-bottom: 0.65rem;
+              font-weight: bold;
+              color: $black;
+            }
+
+            input {
+              width: 100%;
+              outline: none;
+              border: 1px solid #cfcfcf;
+              padding: 1rem;
+              border-radius: 0.5rem;
+              font-weight: normal;
+              font-size: 0.875rem;
+              color: $black;
+              transition: all 0.2s;
+            }
+          }
+        }
+
+        .payment_form_grid {
+          p {
+            font-size: 0.75rem;
+            font-weight: bold;
+            line-height: 1.66;
+            color: $black;
+            margin-bottom: 0.5rem;
+          }
+
+          label {
+            font-size: 0.875rem;
+            font-weight: 700;
+          }
+
+          .e-money,
+          .cash {
+            border: 1px solid #cfcfcf;
+            border-radius: 0.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            span {
+              height: 20px;
+              width: 20px;
+              border: 1px solid #cfcfcf;
+              border-radius: 50%;
+              margin-right: 1rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .circle1 {
+                height: 10px;
+                width: 10px;
+                background: $accent;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+        padding-top: 1.875rem;
+        padding-bottom: 2rem;
+
+        fieldset {
+          .billing_form_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+          }
+
+          .shipping_form_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+              "address address"
+              "zip city"
+              "country  .";
+
+            .form_field_address {
+              grid-area: address;
+            }
+
+            .form_field_city {
+              grid-area: city;
+            }
+
+            .form_field_country {
+              grid-area: country;
+            }
+
+            .form_field_zip {
+              grid-area: zip;
+            }
+          }
+
+          .payment_form_grid {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+              flex: 1;
+            }
+
+            .radio_form {
+              flex: 1;
+            }
+          }
+        }
+
+        .e-money_content {
+          display: flex;
+          justify-content: space-between;
+          gap: 1rem;
+
+          .e-form1 {
+            flex: 1;
+          }
+
+          .e-form2 {
+            flex: 1;
+          }
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3.625rem;
+        padding-bottom: 3rem;
+        max-width: 45.625rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    form {
+      display: flex;
+      flex-direction: row;
+
+      .form-content {
+        flex: 2;
+      }
+
+      .summary_content {
+        flex: 1;
+      }
+    }
+  }
+}
+
+::placeholder {
+  color: $lightGray;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.e-money_content {
+  .e-form1,
+  .e-form2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    label {
+      font-size: 0.75rem;
+      margin-bottom: 0.65rem;
+      font-weight: bold;
+      color: $black;
+    }
+
+    input {
+      width: 100%;
+      outline: none;
+      border: 1px solid #cfcfcf;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-weight: normal;
+      font-size: 0.875rem;
+      color: $black;
+      transition: all 0.2s;
+    }
+  }
+}
+
+.cash-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+
+
+label {
+  line-height: 1.66;
+  display: flex;
+
+  justify-content: space-between;
+
+  span {
+    color: $inputError;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+}

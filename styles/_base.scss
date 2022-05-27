@@ -1,0 +1,129 @@
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  background-color: yellow;
+  --toastify-text-color-success: black;
+}
+
+*,
+*::before,
+*::after,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 6rem;
+    margin-left: 6rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12rem;
+    margin-left: 12rem;
+  }
+}
+
+body {
+  font-family: $font-family;
+  position: relative;
+}
+
+.toastBody {
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  color: $white !important;
+  font-size: 0.875rem !important;
+}
+
+button {
+  outline: none;
+  font-weight: 700;
+  letter-spacing: 0.0655rem;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $black;
+  padding: 0.9rem 1.9rem;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #4c4c4c;
+  }
+}
+.cart_number {
+  color: black;
+}
+
+.button_primary {
+  background-color: $accent;
+
+  &:hover {
+    background-color: $accentLight;
+  }
+}
+
+.button_secondary {
+  background-color: transparent;
+  border: 1px solid $black;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+
+    a,
+    button {
+      color: $white;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: "uppercase";
+}
+
+a:focus,
+button:focus {
+  outline: 2px dashed red;
+  outline-offset: 4px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.go-back {
+  a {
+    font-size: 0.9375rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 2rem;
+    }
+
+    @media screen and (min-width: 1000px) {
+      margin-top: 5rem;
+    }
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}

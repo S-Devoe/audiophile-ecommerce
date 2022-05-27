@@ -1,0 +1,132 @@
+.hero_section{
+    background-color: $black;
+    // width: 100%;
+    margin-top: -.5rem;
+    padding-bottom: 2rem;
+    z-index: 1;
+    position: relative;
+    @media screen and (min-width: 768px) {
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 3rem;
+    }
+
+}
+
+
+.content{
+    position: relative;
+    
+
+    .picture{
+        img{
+            width: 100%;
+        }
+    }
+
+    .hero_content{
+        position: absolute;
+        top: 10rem;
+        text-align: center;
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+        span{
+            font-size: 0.875rem;
+            color: $textLight;
+            text-transform: uppercase;
+            letter-spacing: 0.625rem;
+            font-weight: bold;
+            line-height: 1.1rem;
+        }
+
+        h1{
+            color: $white;
+            letter-spacing: 0.0806rem;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: .6rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        p{
+            color: $textLight;
+            font-size: 0.9375rem;
+            line-height: 1.7rem;
+            margin-bottom: 2rem;
+        }
+
+    }
+
+@media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+
+        .picture{
+            width: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+         }
+        .hero_content{
+            position: relative;
+            padding: unset;
+            top: unset;
+            left: 0;
+            text-align: left;
+           
+        }
+    }
+
+    @media screen and (min-width: 1200px){
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        height: 75vh;
+
+         .picture{
+            margin-right: -1.5rem;
+            position: absolute;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+
+             img{
+                max-block-size: 100%;
+                object-fit: cover;
+             }
+         }
+
+        .hero_content{
+            margin-top: 2rem;
+            position: relative;
+            width: 100%;
+            padding: unset;
+            text-align: left;
+            
+
+            span{
+                font-size: 1rem;
+            }
+
+            h1{
+                font-size: 3.25rem;
+                margin-top: 1rem;
+                max-width: 35rem;
+            }
+           
+            p{
+                font-size: 0.9rem;
+                max-width: 22rem;
+            }
+        }
+    }
+}
