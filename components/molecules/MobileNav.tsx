@@ -12,7 +12,7 @@ function MobileNav() {
   } else{
     document.body.style.overflowY = "visible";
   }
-  // const
+  
   return (
     <nav className="mobile_nav">
       <div className={`active_mobile-nav ${navOpen ? "active" : "default"}`}>
