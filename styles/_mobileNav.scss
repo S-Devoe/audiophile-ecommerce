@@ -1,24 +1,27 @@
-.mobile_nav{
+.mobile_nav {
+  position: relative;
+  width: 100%;
+  z-index: -1000;
+
+  .default {
+    position: absolute;
+    visibility: none;
+    z-index: -1000000;
+    // display: none;
+    opacity: 0;
+    transform: translateX(-100vw);
+    transition: 0.5s ease-in-out;
+  }
+
+  .active {
     width: 100%;
-   
-
-    .default{
-        visibility: hidden;
-        opacity: 0;
-        transform: translateX(-100%);
-        transition: .5s ease-in-out;
-    }
-
-    .active{
-        width: 100%;
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(0);
-        transition: .5s ease-in-out;
-        // position: fixed;
-         
-    }
-    ul{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.5s ease-in-out;
+    // position: fixed;
+  }
+  ul {
     position: relative;
     overflow: auto;
     display: flex;
@@ -30,8 +33,11 @@
     padding-right: 2rem;
     padding-bottom: 6rem;
     height: 100vh;
-    overflow: scroll;
+    overflow: auto;
     scroll-behavior: smooth;
     background-color: $white;
+    ::-webkit-scrollbar-thumb {
+      display: none;
     }
+  }
 }
