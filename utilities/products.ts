@@ -36,10 +36,7 @@ export const getProductBySlug = (slug: string): Product | undefined => {
   return readData().find((product) => product.slug === slug);
 };
 
-// export const getProductBySlug = (slug: string ) => {
-//     readData().find(product => product.slug === slug)
-//     // console.log(slug)
-// }
+
 
 export const getCategories = (): string[] =>{
     const categories = readData().map((product) => product.category)
